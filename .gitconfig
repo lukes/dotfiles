@@ -1,6 +1,6 @@
 [user]
-	email = lduncalfe@eml.cc
-	name = Luke Duncalfe
+  email = lduncalfe@eml.cc
+  name = Luke Duncalfe
 [color]
   branch = auto
   diff = auto
@@ -32,5 +32,5 @@
   lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
   ls = ls-files
 [core]
-	editor = subl -n -w
-	excludesfile = /Users/admin/.gitignore_global
+  editor = subl -n -w
+  excludesfile = /Users/admin/.gitignore_global
