@@ -33,4 +33,4 @@
   ls = ls-files
 [core]
   editor = subl -n -w
-  excludesfile = /Users/admin/.gitignore_global
+  excludesfile = ~/.gitignore_global
