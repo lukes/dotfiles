@@ -1,0 +1,36 @@
+[user]
+	email = lduncalfe@eml.cc
+	name = Luke Duncalfe
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+[color "branch"]
+  current = yellow reverse
+  local = yellow 
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+[alias]
+  st = status
+  ci = commit
+  br = branch
+  co = checkout
+  ps = push origin
+  pl = pull origin
+  df = diff
+  dc = diff --cached
+  lg = log --pretty=format:'%h %s'
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  ls = ls-files
+[core]
+	editor = subl -n -w
+	excludesfile = /Users/admin/.gitignore_global
