@@ -8,7 +8,7 @@ against = 'HEAD' if $?.exitstatus == 0
 diff = `git diff --cached --no-color #{against}`
 
 # stop git from committing any files containing:
-patterns = [/ puts/, /FIXME/, /Rails\.logger/, /:focus => true/, /binding\.pry/, /console\.log/]
+patterns = [/ puts/, /FIXME/, /Rails\.logger/, /focus: true/, /:focus => true/, /binding\.pry/, /console\.log/]
 
 # note, if you know the commit is ok, force the commit temporarily with git commit -n.
 # to get a full view of something preventing a commit, run git diff --cached and use '/' to search for the offending pattern
