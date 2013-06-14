@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+
+%x(git rev-parse --verify HEAD >/dev/null 2>&1)
+
+against = '4b825dc642cb6eb9a060e54bf8d69288fbee4904'
+against = 'HEAD' if $?.exitstatus == 0
+
+diff = `git diff --cached --no-color #{against}`
+
+# stop git from committing any files containing:
+patterns = [/ puts/, /FIXME/, /Rails\.logger/, /:focus => true/, /binding\.pry/, /console\.log/]
+
+# note, if you know the commit is ok, force the commit temporarily with git commit -n.
+# to get a full view of something preventing a commit, run git diff --cached and use '/' to search for the offending pattern
+patterns.each do |pat|
+  matches = diff.split("\n").grep(/^/).grep(pat)
+  if !matches.empty?
+    puts "Error: you are trying to commit something matching: #{pat}"
+    puts matches.join("\n")
+    exit 1
+  end
+end
