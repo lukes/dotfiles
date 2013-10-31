@@ -27,7 +27,7 @@
   pl = pull origin
   df = diff
   dc = diff --cached
-  lg = log --pretty=format:'%h %s'
+  lg = log --pretty=format:'%ci  %h  %an   %s'
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
   lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
   ls = ls-files
