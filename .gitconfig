@@ -25,6 +25,7 @@
   co = checkout
   ps = push origin
   pl = pull origin
+  plr = pull --rebase origin
   df = diff
   dc = diff --cached
   lg = log --pretty=format:'%ci  %h  %an   %s'
