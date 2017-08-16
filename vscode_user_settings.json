@@ -2,5 +2,6 @@
   "editor.rulers": [50, 72],
   "editor.tabSize": 2,
   "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
   "window.restoreWindows": "all",
 }
