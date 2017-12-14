@@ -1,6 +1,6 @@
 [user]
-	email = lduncalfe@eml.cc
-	name = Luke Duncalfe
+  email = lduncalfe@eml.cc
+  name = Luke Duncalfe
 [color]
   branch = auto
   diff = auto
@@ -32,7 +32,7 @@
   lola = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
   ls = ls-files
 [core]
-	editor = subl -n -w
+  editor = subl -n -w
   excludesfile = ~/.gitignore_global
 [init]
-	templatedir = ~/.git_template
+  templatedir = ~/.git_template
