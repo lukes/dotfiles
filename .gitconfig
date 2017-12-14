@@ -1,13 +1,13 @@
 [user]
-  email = lduncalfe@eml.cc
-  name = Luke Duncalfe
+	email = lduncalfe@eml.cc
+	name = Luke Duncalfe
 [color]
   branch = auto
   diff = auto
   status = auto
 [color "branch"]
   current = yellow reverse
-  local = yellow 
+  local = yellow
   remote = green
 [color "diff"]
   meta = yellow bold
@@ -22,7 +22,6 @@
   st = status
   ci = commit
   br = branch
-  brls = for-each-ref --sort=committerdate refs/heads/ --format='%(committerdate:short) %(refname:short)'
   co = checkout
   ps = push origin
   pl = pull origin
@@ -30,15 +29,10 @@
   df = diff
   dc = diff --cached
   lg = log --pretty=format:'%ci  %h  %an   %s'
-  lol = log --graph --decorate --pretty=oneline --abbrev-commit
-  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  lola = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
   ls = ls-files
-  which-branch = rev-parse --abbrev-ref HEAD
-[diff]
-  tool = default-difftool
-[difftool "default-difftool"]
-  cmd = code --wait --diff $LOCAL $REMOTE
 [core]
-#  editor = subl -n -w
-  editor = code --wait
+	editor = subl -n -w
   excludesfile = ~/.gitignore_global
+[init]
+	templatedir = ~/.git_template
