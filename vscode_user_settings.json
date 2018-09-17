@@ -3,6 +3,11 @@
   "editor.tabSize": 2,
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/tmp": true,
+  },
   "window.openFoldersInNewWindow": "on",
   "window.restoreWindows": "all"
 }
