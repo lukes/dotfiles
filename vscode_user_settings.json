@@ -9,5 +9,6 @@
     "**/tmp": true,
   },
   "window.openFoldersInNewWindow": "on",
-  "window.restoreWindows": "all"
+  "window.restoreWindows": "all",
+  "workbench.startupEditor": "newUntitledFile"
 }
