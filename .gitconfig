@@ -18,6 +18,8 @@
   added = yellow
   changed = green
   untracked = cyan
+[help]
+  autocorrect = 20
 [alias]
   st = status
   ci = commit
