@@ -36,5 +36,3 @@
 [core]
   editor = code --wait
   excludesfile = ~/.gitignore_global
-[init]
-  templatedir = ~/.git_template
