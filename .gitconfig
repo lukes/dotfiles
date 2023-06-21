@@ -25,6 +25,7 @@
   ci = commit
   br = branch
   co = checkout
+  fo = fetch origin
   ps = push origin
   pl = pull origin
   plr = pull --rebase origin
