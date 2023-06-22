@@ -26,6 +26,7 @@
   br = branch
   co = checkout
   fo = fetch origin
+  fresh = !git fo $1 && !git co master && !git br -D $1 && !git co $1
   ps = push origin
   pl = pull origin
   plr = pull --rebase origin
