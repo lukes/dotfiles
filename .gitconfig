@@ -24,6 +24,7 @@
   st = status
   ci = commit
   br = branch
+  brs = branch --sort=-committerdate
   co = checkout
   fo = fetch origin
   fresh = !git fo $1 && !git co master && !git br -D $1 && !git co $1
