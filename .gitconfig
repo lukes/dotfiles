@@ -21,13 +21,19 @@
 [help]
   autocorrect = 20
 [alias]
+  amend = commit --amend
   st = status
   ci = commit
   br = branch
   brs = branch --sort=-committerdate
   co = checkout
   fo = fetch origin
-  fresh = !git fo $1 && !git co master && !git br -D $1 && !git co $1
+  # Fetch branch from origin and reset your local branch copy
+  # git fresh my-branch
+  fresh = "!f() { git checkout master && git fetch origin $1 && git branch -D $1 && git checkout origin/$1; }; f"
+  # Check out remote branch (for code review)
+  # git cobr remote-branch
+  cobr = "!f() { git fetch origin $1 && git checkout origin/$1; }; f"
   ps = push origin
   pl = pull origin
   plr = pull --rebase origin
