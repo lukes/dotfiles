@@ -28,7 +28,7 @@
   brs = branch --sort=-committerdate
   co = checkout
   fo = fetch origin
-  # Fetch branch from origin and reset your local branch copy (when changes were made on origin to the branch)
+  # Fetch branch from origin and reset your local branch copy (when changes were made on origin to the branch, and there's nothing local we want to keep)
   # git fresh my-branch
   fresh = "!f() { git checkout master && git fetch origin $1 && git branch -D $1 && git checkout origin/$1; }; f"
   # Check out a remote branch (for code review)
