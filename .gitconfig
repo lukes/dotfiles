@@ -31,9 +31,9 @@
   # Fetch branch from origin and reset your local branch copy (when changes were made on origin to the branch, and there's nothing local we want to keep)
   # git fresh my-branch
   fresh = "!f() { git checkout master && git fetch origin $1 && git branch -D $1 && git checkout origin/$1; }; f"
-  # Check out a remote branch (for code review)
-  # git cobr remote-branch
-  cobr = "!f() { git fetch origin $1 && git checkout origin/$1; }; f"
+  # Check out remote branch (for code review)
+  # git codereview remote-branch
+  codereview = "!f() { git fetch origin $1 && git checkout origin/$1 && bundle && yarn && gdk restart; }; f"
   ps = push origin
   pl = pull origin
   plr = pull --rebase origin
