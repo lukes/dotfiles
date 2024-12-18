@@ -30,7 +30,7 @@
   fo = fetch origin
   # Fetch branch from origin and reset your local branch copy (when changes were made on origin to the branch, and there's nothing local we want to keep)
   # git fresh my-branch
-  fresh = "!f() { git checkout master && git fetch origin $1 && git branch -D $1 && git checkout origin/$1; }; f"
+  fresh = "!f() { git checkout master && git fetch origin $1 && git branch -D $1 && git checkout $1; }; f"
   # Check out remote branch (for code review)
   # git codereview remote-branch
   codereview = "!f() { git fetch origin $1 && git checkout origin/$1 && bundle && yarn && gdk restart; }; f"
