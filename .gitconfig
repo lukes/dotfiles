@@ -33,7 +33,7 @@
   fresh = "!f() { git checkout master && git fetch origin $1 && git branch -D $1 && git checkout $1; }; f"
   # Check out remote branch (for code review)
   # git codereview remote-branch
-  codereview = "!f() { git fetch origin $1 && git checkout origin/$1 && bundle && yarn && gdk restart; }; f"
+  codereview = "!f() { git fetch origin $1 && git checkout origin/$1 && bundle install && yarn && gdk restart; }; f"
   ps = push origin
   pl = pull origin
   plr = pull --rebase origin
